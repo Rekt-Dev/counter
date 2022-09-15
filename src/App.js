@@ -1,6 +1,12 @@
 import "./styles.css";
 import { useState } from "react";
 export default function App() {
+
+const[name,setName]  =useState("name")
+const changeName=()=>{
+  setName("ofknfear")
+}
+  
   const [count, setCount] = useState(0);
 
   const increment = () => {
@@ -13,9 +19,10 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Counter</h1>
+      <h1>{name}</h1>
       <button onClick={increment}>increment</button>
       <button onClick={minus}>decrement</button>
+      <button onClick={changeName}>change name</button>
 
       <h2>count is now {count} !</h2>
     </div>
